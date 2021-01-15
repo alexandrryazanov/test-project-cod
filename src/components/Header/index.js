@@ -2,7 +2,7 @@ import React from "react";
 import { HeaderWrapper } from "./units";
 
 const Header = () => {
-    return <HeaderWrapper>HEADER</HeaderWrapper>;
+    return <HeaderWrapper>React application</HeaderWrapper>;
 };
 
 export default Header;

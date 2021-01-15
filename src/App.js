@@ -1,25 +1,38 @@
 import React from "react";
 import "./App.css";
+import {
+    BrowserRouter,
+    Switch,
+    Route,
+    Redirect,
+    withRouter,
+} from "react-router-dom";
 
-import Person from "./Person";
-import MainWrapper from "./MainWrapper";
+import Person from "./components/Person";
+import MainWrapper from "./components/MainWrapper";
+
+import MainPage from "./pages/Main";
+import Clients from "./pages/Clients";
+import About from "./pages/About";
 
 function App() {
-    const name = "Petya";
-    const age = 22;
-
-    console.log("Имя мальчика: " + name + ", а его возраст: " + age);
-    console.log(`Имя мальчика: ${name}, а его возраст: ${age}`);
-
     return (
-        <>
+        <BrowserRouter>
             <MainWrapper>
-                <Person name={"Vasily"} age={32} bgColor={"red"} />
-                <Person name={"Petr"} age={66} bgColor={"blue"} alarm />
-                <Person name={"Katya"} age={33} bgColor={"yellow"} alarm />
-                <Person name={"Vladimir"} age={13} />
+                <Switch>
+                    <Route exact path={"/"}>
+                        <MainPage />
+                    </Route>
+                    <Route exact path={"/clients"}>
+                        <Clients />
+                    </Route>
+                    <Route exact path={"/about"}>
+                        <About />
+                    </Route>
+                    <Redirect to={"/"} />
+                </Switch>
             </MainWrapper>
-        </>
+        </BrowserRouter>
     );
 }
 

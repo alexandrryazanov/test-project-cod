@@ -7,6 +7,11 @@ export const ItemWrapper = styled.div`
     justify-content: center;
     align-items: center;
     padding: 10px 0;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.5;
+    }
+    user-select: none;
 `;
 
 export const ItemText = styled.div`
