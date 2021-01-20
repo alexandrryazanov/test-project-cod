@@ -1,14 +1,7 @@
 import React from "react";
 import "./App.css";
-import {
-    BrowserRouter,
-    Switch,
-    Route,
-    Redirect,
-    withRouter,
-} from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
-import Person from "./components/Person";
 import MainWrapper from "./components/MainWrapper";
 
 import MainPage from "./pages/Main";
@@ -20,15 +13,9 @@ function App() {
         <BrowserRouter>
             <MainWrapper>
                 <Switch>
-                    <Route exact path={"/"}>
-                        <MainPage />
-                    </Route>
-                    <Route exact path={"/clients"}>
-                        <Clients />
-                    </Route>
-                    <Route exact path={"/about"}>
-                        <About />
-                    </Route>
+                    <Route exact path={"/"} component={MainPage} />
+                    <Route exact path={"/clients"} component={Clients} />
+                    <Route exact path={"/about"} component={About} />
                     <Redirect to={"/"} />
                 </Switch>
             </MainWrapper>

@@ -1,21 +1,21 @@
 import React from "react";
 import { SideMenuWrapper } from "./units";
 import Item from "./Item";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const SideMenu = () => {
     return (
         <SideMenuWrapper>
             <div>
-                <Link exact to={"/"}>
+                <NavLink exact to={"/"}>
                     <Item icon={"card"} text={"Главная"} />
-                </Link>
-                <Link exact to={"/clients"}>
+                </NavLink>
+                <NavLink exact to={"/clients"}>
                     <Item icon={"user"} text={"Клиенты"} />
-                </Link>
-                <Link exact to={"/about"}>
+                </NavLink>
+                <NavLink exact to={"/about"}>
                     <Item icon={"edit"} text={"О нас"} />
-                </Link>
+                </NavLink>
             </div>
             <div>
                 <Item icon={"settings"} />

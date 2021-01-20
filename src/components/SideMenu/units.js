@@ -10,4 +10,14 @@ export const SideMenuWrapper = styled.div`
     align-items: center;
     padding: 20px 5px;
     box-sizing: border-box;
+
+    & a {
+        text-decoration: none;
+        color: black;
+    }
+
+    & .active {
+        color: orange;
+        font-weight: bold;
+    }
 `;
