@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import MyButton from "../components/MyButton";
+import TrafficLight from "../components/TrafficLight";
 
 const MainPage = () => {
     const [value, setValue] = useState(1);
@@ -7,7 +8,7 @@ const MainPage = () => {
     const [buttonColor, setButtonColor] = useState(0);
 
     return (
-        <div>
+        <>
             <h1>
                 {switcher ? "Значение" : "Счетчик"}: {value}
             </h1>
@@ -34,7 +35,9 @@ const MainPage = () => {
             >
                 change button color
             </MyButton>
-        </div>
+            <hr />
+            <TrafficLight />
+        </>
     );
 };
 

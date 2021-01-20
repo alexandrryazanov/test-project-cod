@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 
 const MyButton = styled.button`
     height: 40px;
+    min-width: 135px;
     border-radius: 10px;
     background-color: ${(props) => props.color || "orange"};
     outline: none;
