@@ -18,5 +18,7 @@ export const Light = styled.div`
     border-radius: 100%;
     border: 2px solid lightgray;
     box-shadow: 0 0 10px black;
-    background-color: ${(props) => (props.isActive ? props.color : "black")};
+    background-color: ${({ isActive, color }) => (isActive ? color : "black")};
+
+    transition: background-color ease-in-out 0.3s;
 `;

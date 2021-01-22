@@ -4,13 +4,13 @@ import SideMenu from "../SideMenu";
 
 import { ContentWrapper, ContentWrapperWithMenu } from "./units";
 
-const MainWrapper = (props) => {
+const MainWrapper = ({ children }) => {
     return (
         <>
             <Header />
             <ContentWrapperWithMenu>
                 <SideMenu />
-                <ContentWrapper>{props.children}</ContentWrapper>
+                <ContentWrapper>{children}</ContentWrapper>
             </ContentWrapperWithMenu>
         </>
     );

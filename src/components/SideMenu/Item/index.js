@@ -1,11 +1,11 @@
 import React from "react";
 import { ItemText, ItemWrapper } from "./units";
 
-const Item = (props) => {
+const Item = ({ icon, text }) => {
     return (
         <ItemWrapper>
-            <img src={`/assets/icons/${props.icon}.png`} alt={""} width={24} />
-            <ItemText>{props.text}</ItemText>
+            <img src={`/assets/icons/${icon}.png`} alt={""} width={24} />
+            <ItemText>{text}</ItemText>
         </ItemWrapper>
     );
 };
