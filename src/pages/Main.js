@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Counter from "../components/Counter";
 import News from "../components/News";
+import AuthForm from "../components/AuthForm";
 
 const MainPage = () => {
     const [value, setValue] = useState(0);
@@ -8,7 +9,8 @@ const MainPage = () => {
     return (
         <>
             <News {...{ value, setValue }} />
-            <Counter value={name} />
+            <Counter value={value} />
+            <AuthForm />
         </>
     );
 };

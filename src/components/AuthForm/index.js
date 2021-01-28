@@ -1,14 +1,28 @@
-import React from "react";
-import { Button, Error, Field, FormWrapper, Header } from "./units";
+import React, { useState } from "react";
+import { Button, Error, FormWrapper, Header } from "./units";
+import Field from "../Field";
 
 const AuthForm = () => {
+    const [login, setLogin] = useState("");
+    const [password, setPassword] = useState("");
+
     return (
         <FormWrapper>
             <Header>Authorization</Header>
-
             <Error>login is not valid</Error>
-            <Field placeholder={"Your login"} error />
-            <Field placeholder={"Your password"} type={"password"} />
+            <Field
+                type={"text"}
+                placeholder={"Your login"}
+                value={login}
+                onChange={(e) => setLogin(e.target.value)}
+                error
+            />
+            <Field
+                type={"password"}
+                placeholder={"Введите пароль"}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+            />
             <Button>Login</Button>
         </FormWrapper>
     );

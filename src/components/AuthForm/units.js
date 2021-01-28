@@ -15,6 +15,7 @@ export const FormWrapper = styled.div`
     top: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
+    padding-bottom: 20px;
 `;
 
 export const Header = styled.div`
@@ -54,6 +55,7 @@ export const Field = styled.input`
 export const Error = styled.pre`
     color: red;
     font-size: 1.2rem;
+    margin: 0;
 `;
 
 export const Button = styled.button`
@@ -68,7 +70,7 @@ export const Button = styled.button`
     border-radius: 8px;
     font-weight: 600;
     text-shadow: 1px 1px 2px rgb(120, 0, 0);
-    margin-bottom: 40px;
+    margin: 20px;
     cursor: pointer;
 
     &:hover {
