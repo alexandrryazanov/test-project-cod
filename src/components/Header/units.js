@@ -8,4 +8,5 @@ export const HeaderWrapper = styled.div`
     align-items: center;
     font-size: 32px;
     box-shadow: 5px 0 10px lightgray;
+    position: relative;
 `;

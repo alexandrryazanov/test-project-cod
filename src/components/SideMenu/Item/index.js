@@ -4,7 +4,7 @@ import { ItemText, ItemWrapper } from "./units";
 const Item = ({ icon, text }) => {
     return (
         <ItemWrapper>
-            <img src={`/assets/icons/${icon}.png`} alt={""} width={24} />
+            {icon}
             <ItemText>{text}</ItemText>
         </ItemWrapper>
     );

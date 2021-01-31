@@ -19,7 +19,7 @@ const AuthForm = () => {
             />
             <Field
                 type={"password"}
-                placeholder={"Введите пароль"}
+                placeholder={"Your password"}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
             />
