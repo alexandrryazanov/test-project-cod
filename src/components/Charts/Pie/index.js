@@ -2,43 +2,17 @@ import React from "react";
 import { ResponsivePie } from "@nivo/pie";
 
 const data = [
-    {
-        id: "hack",
-        label: "hack",
-        value: 307,
-        color: "hsl(255, 70%, 50%)",
-    },
-    {
-        id: "make",
-        label: "make",
-        value: 172,
-        color: "hsl(265, 70%, 50%)",
-    },
-    {
-        id: "scala",
-        label: "scala",
-        value: 131,
-        color: "hsl(219, 70%, 50%)",
-    },
-    {
-        id: "stylus",
-        label: "stylus",
-        value: 177,
-        color: "hsl(350, 70%, 50%)",
-    },
-    {
-        id: "java",
-        label: "java",
-        value: 371,
-        color: "hsl(111, 70%, 50%)",
-    },
+    { id: "test1", value: 307 },
+    { id: "test2", value: 172 },
+    { id: "test3", value: 131 },
+    { id: "test4", value: 177 },
 ];
 
 const Pie = () => {
     return (
         <ResponsivePie
             data={data} // данные
-            margin={{ top: 0, right: 40, bottom: 70, left: 40 }} // отступы
+            margin={{ top: 0, right: 50, bottom: 70, left: 50 }} // отступы
             innerRadius={0.5} // радиус дырки бублика
             padAngle={3} // пробелы между секторами
             cornerRadius={1} //Закругление рамки каждого сектора
