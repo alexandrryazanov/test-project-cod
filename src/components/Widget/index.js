@@ -1,14 +1,14 @@
 import React from "react";
 import { Header, NoChart, WidgetWrapper } from "./units";
-import * as Charts from "../WidgetComponents";
+import * as WidgetComponents from "../WidgetComponents";
 
-const Widget = ({ title, type, data }) => {
-    const Chart = (data && Charts[type]) || NoChart;
+const Widget = ({ title, type, data = [] }) => {
+    const Content = WidgetComponents[type] || NoChart;
 
     return title ? (
         <WidgetWrapper>
             <Header>{title}</Header>
-            <Chart {...{ data }} />
+            <Content {...{ data }} />
         </WidgetWrapper>
     ) : null;
 };

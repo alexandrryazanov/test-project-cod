@@ -87,3 +87,48 @@ export const ordersCount = [
         ],
     },
 ];
+
+export const lastOrders = [
+    {
+        id: 1,
+        client: "Vasya",
+        phone: 89999999999,
+        cost: 100,
+    },
+    {
+        id: 2,
+        client: "Petya",
+        phone: 899945459999,
+        cost: 300,
+    },
+    {
+        id: 3,
+        client: "Katya",
+        phone: 89999999999,
+        cost: 100,
+    },
+    {
+        id: 4,
+        client: "Misha",
+        phone: 89999999999,
+        cost: 500,
+    },
+    {
+        id: 5,
+        client: "Lena",
+        phone: 89999999999,
+        cost: 250,
+    },
+    {
+        id: 6,
+        client: "Mike",
+        phone: 89999999999,
+        cost: 440,
+    },
+    {
+        id: 7,
+        client: "Igor",
+        phone: 89999999999,
+        cost: 100,
+    },
+];

@@ -1,33 +1,39 @@
 import React from "react";
+import {
+    StyledColumn,
+    StyledHeadRow,
+    StyledRow,
+    StyledTable,
+    StyledTbody,
+    StyledThead,
+} from "./units";
 
-const Table = () => {
+const Table = ({ data }) => {
+    const tableHeaders = (
+        <StyledHeadRow>
+            <StyledColumn>№</StyledColumn>
+            <StyledColumn>Клиент</StyledColumn>
+            <StyledColumn>Телефон</StyledColumn>
+            <StyledColumn>Сумма</StyledColumn>
+        </StyledHeadRow>
+    );
+
+    const tableBody = data
+        .filter((_, index) => index < 6)
+        .map(({ id, client, phone, cost }) => (
+            <StyledRow key={id} onClick={() => alert(`Переход на заказ ${id}`)}>
+                <StyledColumn>{id}</StyledColumn>
+                <StyledColumn>{client}</StyledColumn>
+                <StyledColumn>{phone}</StyledColumn>
+                <StyledColumn>{cost}$</StyledColumn>
+            </StyledRow>
+        ));
+
     return (
-        <table border={1} width={"100%"}>
-            <thead style={{ fontWeight: "bold" }}>
-                <tr>
-                    <td>title 1</td>
-                    <td>title 2</td>
-                    <td>title 3</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>val 1</td>
-                    <td>val 2</td>
-                    <td>val 3</td>
-                </tr>
-                <tr>
-                    <td>val 1</td>
-                    <td>val 2</td>
-                    <td>val 3</td>
-                </tr>
-                <tr>
-                    <td>val 1</td>
-                    <td>val 2</td>
-                    <td>val 3</td>
-                </tr>
-            </tbody>
-        </table>
+        <StyledTable>
+            <StyledThead>{tableHeaders}</StyledThead>
+            <StyledTbody>{tableBody}</StyledTbody>
+        </StyledTable>
     );
 };
 
