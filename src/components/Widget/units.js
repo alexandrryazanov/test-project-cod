@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import React from "react";
 
 export const WidgetWrapper = styled.div`
     width: 300px;
@@ -16,3 +17,7 @@ export const Header = styled.h2`
     margin-top: 0;
     margin-bottom: 10px;
 `;
+
+export const NoChart = () => {
+    return <div>Нет такого графика или нет данных</div>;
+};

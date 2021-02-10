@@ -1,18 +1,11 @@
 import React from "react";
 import { ResponsivePie } from "@nivo/pie";
 
-const data = [
-    { id: "test1", value: 307 },
-    { id: "test2", value: 172 },
-    { id: "test3", value: 131 },
-    { id: "test4", value: 177 },
-];
-
-const Pie = () => {
+const Pie = ({ data }) => {
     return (
         <ResponsivePie
             data={data} // данные
-            margin={{ top: 0, right: 50, bottom: 70, left: 50 }} // отступы
+            margin={{ top: 0, right: 70, bottom: 70, left: 70 }} // отступы
             innerRadius={0.5} // радиус дырки бублика
             padAngle={3} // пробелы между секторами
             cornerRadius={1} //Закругление рамки каждого сектора
