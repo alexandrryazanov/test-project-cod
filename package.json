@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.1.2",
+    "@emotion/css": "^11.1.3",
+    "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.0.0",
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
@@ -43,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@emotion/core": "^10.1.1"
   }
 }

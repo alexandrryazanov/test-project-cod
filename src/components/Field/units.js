@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 import { Visibility, VisibilityOff } from "@material-ui/icons";
 
+import { css } from "@emotion/react";
+
 export const Input = styled.input`
     width: 100%;
     height: 100%;
@@ -27,6 +29,10 @@ export const Wrapper = styled.div`
     width: 80%;
     height: 4rem;
     margin: 20px;
+
+    ${({ wrapperStyle }) => css`
+        ${wrapperStyle}
+    `};
 `;
 
 export const OpenedEye = styled(Visibility)`

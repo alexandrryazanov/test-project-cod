@@ -19,7 +19,7 @@ const Table = ({ data }) => {
     );
 
     const tableBody = data
-        .filter((_, index) => index < 6)
+        .filter((_, index) => index < 5)
         .map(({ id, client, phone, cost }) => (
             <StyledRow key={id} onClick={() => alert(`Переход на заказ ${id}`)}>
                 <StyledColumn>{id}</StyledColumn>

@@ -3,7 +3,7 @@ import { Wrapper, OpenedEye, ClosedEye, Input } from "./units";
 
 // ...rest - так указываются остальные пропсы
 // т.е. достаем из пропсов пропс type, а все пропсы кроме type попадут в rest
-const Field = ({ type = "text", ...rest }) => {
+const Field = ({ type = "text", wrapperStyle, ...rest }) => {
     const [visible, setVisible] = useState(false);
 
     const toggleVisible = () => {
@@ -11,7 +11,7 @@ const Field = ({ type = "text", ...rest }) => {
     };
 
     return (
-        <Wrapper>
+        <Wrapper {...{ wrapperStyle }}>
             <Input
                 {...rest}
                 type={visible || type === "text" ? "text" : type}

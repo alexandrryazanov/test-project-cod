@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 export const StyledTable = styled.table`
-    font-size: 10px;
+    font-size: 14px;
     border-collapse: collapse;
     width: 100%;
     box-shadow: 0 0 5px lightgray;

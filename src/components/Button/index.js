@@ -6,8 +6,8 @@ const Button = ({ children, ...rest }) => {
     return (
         <ButtonMUI
             variant="contained"
-            color="primary"
-            style={{ margin: "5px 0" }}
+            style={{ margin: "3px" }}
+            color={"primary"}
             {...rest}
         >
             {children}

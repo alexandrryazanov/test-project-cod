@@ -16,8 +16,7 @@ const MainPage = () => {
             <Widget type={"Line"} title={"По дням"} data={expensesInDay} />
             <Widget type={"Table"} title={"Послед. заказы"} data={lastOrders} />
             <Widget />
-            <Widget title={"Быстрые действия"} type={"Actions"} />
-            <Widget title={"Что-то еще"} type={"Pie"} />
+            <Widget type={"Actions"} title={"Быстрые действия"} />
             <Widget />
             <Widget />
             <Widget />
