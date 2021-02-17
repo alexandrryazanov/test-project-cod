@@ -6,6 +6,7 @@ import {
 } from "../components/CreateOrderComponents/units";
 import Field from "../components/Field";
 import GoodsList from "../components/CreateOrderComponents/GoodsList";
+import { goodsStore } from "../tempData/goods";
 
 const CreateOrder = () => {
     return (
@@ -15,7 +16,7 @@ const CreateOrder = () => {
                 placeholder={"Введите ФИО заказчика"}
                 wrapperStyle={fieldWrapper}
             />
-            <GoodsList />
+            <GoodsList goods={goodsStore} />
         </OrderWrapper>
     );
 };

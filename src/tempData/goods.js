@@ -1,0 +1,42 @@
+export const goodsStore = [
+    {
+        id: 1,
+        brand: "Apple",
+        title: "iPhone",
+        model: "X",
+        count: 10,
+        cost: 1000,
+    },
+    {
+        id: 2,
+        brand: "Apple",
+        title: "airPods",
+        model: "2",
+        count: 0,
+        cost: 500,
+    },
+    {
+        id: 3,
+        brand: "Samsung",
+        title: "Galaxy",
+        model: "A5",
+        count: 14,
+        cost: 1000,
+    },
+    {
+        id: 4,
+        brand: "Apple",
+        title: "iPhone",
+        model: "11",
+        count: 8,
+        cost: 1000,
+    },
+    {
+        id: 5,
+        brand: "Samsung",
+        title: "Galaxy",
+        model: "S",
+        count: 22,
+        cost: 1200,
+    },
+];

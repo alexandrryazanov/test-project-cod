@@ -1,23 +1,20 @@
 import React, { useState } from "react";
-import { ItemWrapper } from "./units";
+import {
+    ControlsWrapper,
+    Count,
+    DeleteIcon,
+    GoodTitle,
+    ItemWrapper,
+} from "./units";
 
-const Item = ({ title, count: countItem }) => {
-    const [count, setCount] = useState(countItem);
-
-    const nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-
+const Item = ({ title }) => {
     return (
         <ItemWrapper>
-            <div>{title}</div>
-            <input
-                value={count}
-                onChange={(e) => {
-                    const val = e.target.value;
-                    const last = Number(val[val.length - 1]);
-                    if (nums.includes(last)) setCount(String(count) + last);
-                }}
-            />
-            <button>Х</button>
+            <GoodTitle>{title}</GoodTitle>
+            <ControlsWrapper>
+                <Count value={0} />
+                <DeleteIcon />
+            </ControlsWrapper>
         </ItemWrapper>
     );
 };
