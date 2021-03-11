@@ -7,12 +7,12 @@ import {
     ItemWrapper,
 } from "./units";
 
-const Item = ({ title }) => {
+const Item = ({ title, count }) => {
     return (
         <ItemWrapper>
             <GoodTitle>{title}</GoodTitle>
             <ControlsWrapper>
-                <Count value={0} />
+                <Count defaultValue={count} />
                 <DeleteIcon />
             </ControlsWrapper>
         </ItemWrapper>

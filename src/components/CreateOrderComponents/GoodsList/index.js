@@ -1,21 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import { ListWrapper } from "./units";
 import Item from "./Item";
 import Select from "../../Select";
+import { modelFullName } from "./utils";
 
 const GoodsList = ({ goods }) => {
-    const preparedGoods = goods
-        .filter((good) => good.count > 0)
-        .map((good) => `${good.brand} ${good.title} ${good.model}`);
+    const [list, setList] = useState([]);
+
+    const options = goods
+        .filter(({ count }) => count > 0)
+        .map(({ id, ...rest }) => ({ id, title: modelFullName(rest) }));
+
+    const preparedList = list.map(({ id, title, count }) => (
+        <Item {...{ title, count, key: title + count }} />
+    ));
+
+    const addGood = (selectedId) => {
+        const { id, ...rest } = goods.find(({ id }) => id === selectedId);
+        const foundGood = list.findIndex((good) => good.id === id);
+
+        if (foundGood >= 0) {
+            //меняем товар в списке
+            setList(
+                list.map((good, i) =>
+                    i !== foundGood ? good : { ...good, count: good.count + 1 }
+                )
+            );
+        } else {
+            //Добавляем товар в список
+            setList([
+                ...list,
+                {
+                    id,
+                    title: modelFullName(rest),
+                    count: 1,
+                },
+            ]);
+        }
+    };
 
     return (
         <ListWrapper>
             <h2>Список товаров</h2>
-            <Item title={"Товар1"} count={1} />
-            <Item title={"Товар2"} count={2} />
-            <Item title={"Товар3"} count={15} />
-            <Item title={"Товар4"} count={4} />
-            <Select options={preparedGoods} />
+            {preparedList}
+            <Select
+                placeholder={"Добавить товар"}
+                onClickItem={addGood}
+                {...{ options }}
+            />
         </ListWrapper>
     );
 };

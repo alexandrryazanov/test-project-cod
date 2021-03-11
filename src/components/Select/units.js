@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { ArrowDropDown } from "@material-ui/icons";
+import { css } from "@emotion/react";
 
 export const SelectWithDropdown = styled.div`
     position: relative;
@@ -29,7 +30,22 @@ export const Arrow = styled(ArrowDropDown)`
     &:active {
         transform: scale(0.9);
     }
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(-90deg);
+        }
+        100% {
+            transform: rotate(-180deg);
+        }
+    }
 
-    transform: rotate(${({ rotate }) => rotate || 0}deg);
-    transition: transform 0.8s;
+    ${({ rotate }) =>
+        rotate &&
+        css`
+            animation: rotation 0.3s linear;
+            transform: rotate(-180deg);
+        `}
 `;
