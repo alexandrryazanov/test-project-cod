@@ -23,7 +23,7 @@ const Clients = () => {
     <Loader />
   ) : (
     <>
-      <h1>Взаимодейтвие с сервером</h1>
+      <h1>Взаимодейтвие с сервером!!!</h1>
       <button onClick={fetchData}>Загрузить данные</button>
       <ul>
         {users.map((user) => (
